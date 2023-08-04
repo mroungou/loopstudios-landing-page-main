@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+}
+body * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  width: 100%;
+}
+body main .overlay {
+  background: hsl(0, 0%, 0%);
+  height: 0vh;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+body main .overlay .overlay-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 1rem;
+}
+body main .overlay .overlay-nav .close-button {
+  display: block;
+  margin-left: auto;
+  width: 12%;
+}
+body main .overlay .overlay-content {
+  padding-top: 18rem;
+}
+body main .overlay .overlay-content a, body main .overlay .overlay-content a:visited {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  display: grid;
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+body main .header {
+  width: 100%;
+  display: block;
+}
+body main .header img {
+  width: 100%;
+}
+body main .header .top-bar {
+  position: relative;
+}
+body main .header .top-bar .navigation {
+  position: absolute;
+  bottom: 600px;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body main .header .top-bar .navigation .burger {
+  padding-top: 5px;
+  display: block;
+  margin-left: auto;
+  width: 15%;
+}
+body main .header h1 {
+  position: absolute;
+  bottom: 300px;
+  left: 20px;
+  width: 90%;
+  margin: auto;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 100%);
+  border: 3px solid hsl(0, 0%, 100%);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+body main .interactive {
+  padding: 6rem 1.5rem;
+}
+body main .interactive h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+body main .interactive p {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: hsl(0, 0%, 41%);
+  padding: 0 1rem;
+}
+body main .creations .ads {
+  display: grid;
+  grid-template-rows: repeat(8, 150px);
+  padding: 1rem 1.5rem;
+}
+body main .creations .ads > * {
+  position: relative;
+}
+body main .creations .ads > * > h3 {
+  bottom: 30px;
+  left: 10px;
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  width: 30%;
+  font-family: "Josefin Sans", sans-serif;
+}
+body main .creations .ads .the-grid h3 {
+  width: 25%;
+}
+body main .creations h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+body main .creations button {
+  padding: 1rem 1.5rem;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  width: 50%;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 0%);
+}
+body main .creations button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Alata", sans-serif;
+  letter-spacing: 0.5ch;
+  color: hsl(0, 0%, 0%);
+}
+body main .footer {
+  background-color: hsl(0, 0%, 0%);
+  padding-bottom: 2.5rem;
+}
+body main .footer .footer-logo {
+  width: 50%;
+  margin: auto;
+}
+body main .footer .footer-logo img {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+body main .footer a, body main .footer a:visited {
+  display: block;
+  font-family: "Alata", sans-serif;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+body main .footer .socials {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  width: 50%;
+  margin: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+body main .footer .socials img {
+  margin: auto;
+  width: 56%;
+}
+body main .footer .copyrights {
+  font-family: "Alata", sans-serif;
+  font-size: 12px;
+  color: hsl(0, 0%, 55%);
+  text-align: center;
+}
+
+.open {
+  display: block;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.closed {
+  height: 0;
+  padding: 0;
+}/*# sourceMappingURL=main.css.map */
