@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+body .desktop {
+  display: none !important;
+}
 body * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -55,7 +58,7 @@ body main .header .top-bar .navigation {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-body main .header .top-bar .navigation .burger {
+body main .header .top-bar .navigation #open-button {
   padding-top: 5px;
   display: block;
   margin-left: auto;
@@ -173,6 +176,171 @@ body main .footer .copyrights {
   text-align: center;
 }
 
+@media screen and (min-width: 1440px) {
+  body * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    width: 100%;
+  }
+  main .mobile {
+    display: none !important;
+  }
+  main .desktop {
+    display: block !important;
+  }
+  main .header .top-bar .navigation {
+    bottom: 550px !important;
+    width: 85%;
+    left: 215px;
+  }
+  main .header .top-bar .navigation .logo {
+    top: 20px;
+    width: 25%;
+  }
+  main .header .top-bar .navigation .links a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-family: "Alata", sans-serif;
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+  main .header .top-bar .navigation .links a:hover {
+    -webkit-text-decoration: underline 0.25rem;
+            text-decoration: underline 0.25rem;
+    text-underline-offset: 0.5rem;
+    cursor: pointer;
+    transition: 5ms;
+  }
+  main .header h1 {
+    bottom: 705px !important;
+    left: 230px !important;
+    width: 41% !important;
+    font-size: 4.5rem !important;
+    padding-top: 2.5rem !important;
+  }
+  main .interactive {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    padding: 6rem 4rem !important;
+  }
+  main .interactive .interactive-image {
+    grid-column: 1/5;
+  }
+  main .interactive .interactive-text {
+    grid-column: 4/-1;
+    grid-row: 2/-1;
+    background: hsl(0, 0%, 100%);
+  }
+  main .interactive .interactive-text h2 {
+    font-size: 3.5rem;
+    text-align: left;
+    padding-right: 5rem;
+    padding-left: 4rem;
+  }
+  main .interactive .interactive-text p {
+    text-align: left;
+    padding-right: 5rem;
+    padding-left: 4rem;
+  }
+  main .creations {
+    margin-top: 3rem;
+  }
+  main .creations .heading {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .creations .heading h2 {
+    text-align: left;
+    margin-left: 4rem;
+    font-size: 3rem;
+  }
+  main .creations .heading button {
+    display: block;
+    align-content: end;
+    text-transform: uppercase;
+    font-family: "Alata", sans-serif;
+    letter-spacing: 0.4ch;
+    width: 20%;
+    margin-left: 34rem;
+  }
+  main .creations .heading button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+  }
+  main .creations .ads {
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    row-gap: 15px;
+    grid-template-rows: repeat(2, 450px) !important;
+  }
+  main .creations .ads img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  main .creations .ads h3 {
+    bottom: 5px !important;
+    left: 30px !important;
+  }
+  main .creations .ads > *:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  main .creations .ads > *:hover h3 {
+    color: hsl(0, 0%, 0%);
+  }
+  main .creations .ads > *:hover img {
+    opacity: 0.4;
+  }
+  main .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 130px);
+    grid-template-areas: "logo socials" "links copyright";
+  }
+  main .footer .footer-logo {
+    grid-area: logo;
+  }
+  main .footer .footer-logo img {
+    width: 85%;
+  }
+  main .footer .links {
+    grid-area: links;
+    padding-left: 11rem;
+  }
+  main .footer .links a {
+    display: inline !important;
+    margin-right: 1rem;
+  }
+  main .footer .links a:hover {
+    -webkit-text-decoration: underline 0.25rem;
+            text-decoration: underline 0.25rem;
+    text-underline-offset: 0.5rem;
+    cursor: pointer;
+    transition: 5ms;
+  }
+  main .footer .socials {
+    margin-left: 22rem !important;
+    grid-area: socials;
+  }
+  main .footer .socials img {
+    width: 85% !important;
+    padding: 1rem;
+  }
+  main .footer .socials img:hover {
+    cursor: pointer;
+    border-bottom: solid 0.25rem hsl(0, 0%, 100%);
+  }
+  main .footer .copyrights {
+    grid-area: copyright;
+    margin-left: 12rem;
+    font-size: 1rem !important;
+  }
+}
 .open {
   display: block;
   height: 100vh;
