@@ -336,6 +336,7 @@ body main .footer .copyrights {
   main .footer .links {
     grid-area: links;
     padding-left: 11rem;
+    margin-top: 1rem;
   }
   main .footer .links a {
     display: inline !important;
@@ -364,6 +365,7 @@ body main .footer .copyrights {
     grid-area: copyright;
     font-size: 1rem !important;
     width: 45%;
+    margin-top: 1rem;
     margin-left: 24rem;
   }
 }

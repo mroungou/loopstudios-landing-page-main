@@ -361,6 +361,7 @@ body {
             .links {
                 grid-area: links;
                 padding-left: 11rem;
+                margin-top: 1rem;
                 a {
                     display: inline !important;
                     margin-right: 1rem;
@@ -388,6 +389,7 @@ body {
                 grid-area: copyright;
                 font-size: 1rem !important;
                 width: 45%;
+                margin-top: 1rem;
                 margin-left: 24rem;
             }
         }
