@@ -63,8 +63,8 @@ body {
                     position: absolute;
                     bottom: 600px;
                     padding: 0 1.5rem;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    // display: grid;
+                    // grid-template-columns: 1fr 1fr;
                     #open-button {
                         padding-top: 5px;
                         display: block;
@@ -212,16 +212,31 @@ body {
             display: block !important;
         }
         .header {
+            position: relative;
             .top-bar {
+                position: relative;
+                display: grid;
                 .navigation {
-                    bottom: 550px !important;
-                    width: 85%;
-                    left: 215px;
+                    display: grid;
+                    grid-template-areas: "logo links";
+                    grid-template-columns: auto 1fr;
+                    align-items: center;
+                    padding: 4rem 10rem 0 !important;
                     .logo {
-                        top: 20px;
-                        width: 25%;
+                        grid-area: logo;
+                        width: 80%;
+                        height: auto;
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                     .links {
+                        grid-area: links;
+                        // display: flex !important;
+                        // justify-content: flex-end;
+                        // gap: 1rem;
+                        width: 50%;
+                        margin-left: 36rem;
                         a {
                             color: $white;
                             text-decoration: none;
@@ -232,18 +247,27 @@ body {
                                 text-decoration: underline 0.25rem;
                                 text-underline-offset: 0.5rem;
                                 cursor: pointer;
-                                transition: 5ms;
+                                transition: 0.3s;
                             }
                         }
                     }
                 }
             }
-            h1 {
-                bottom: 705px !important;
-                left: 230px !important;
+            .card-content {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-end !important;
                 width: 41% !important;
                 font-size: 4.5rem !important;
                 padding-top: 2.5rem !important;
+            }
+            .image-thumb-desktop, .card-content {
+                grid-area: 1/2;
+            }
+            h1 {
+                font-size: 3.5rem !important;
+                width: 35% !important;
+                margin-left: 8.5rem !important;
             }
         }
         .interactive {
@@ -362,8 +386,9 @@ body {
             }
             .copyrights {
                 grid-area: copyright;
-                margin-left: 12rem;
                 font-size: 1rem !important;
+                width: 45%;
+                margin-left: 24rem;
             }
         }
     }

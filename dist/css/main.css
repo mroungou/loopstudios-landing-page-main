@@ -55,8 +55,6 @@ body main .header .top-bar .navigation {
   position: absolute;
   bottom: 600px;
   padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 body main .header .top-bar .navigation #open-button {
   padding-top: 5px;
@@ -190,14 +188,32 @@ body main .footer .copyrights {
   main .desktop {
     display: block !important;
   }
+  main .header {
+    position: relative;
+  }
+  main .header .top-bar {
+    position: relative;
+    display: grid;
+  }
   main .header .top-bar .navigation {
-    bottom: 550px !important;
-    width: 85%;
-    left: 215px;
+    display: grid;
+    grid-template-areas: "logo links";
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 4rem 10rem 0 !important;
   }
   main .header .top-bar .navigation .logo {
-    top: 20px;
-    width: 25%;
+    grid-area: logo;
+    width: 80%;
+    height: auto;
+  }
+  main .header .top-bar .navigation .logo:hover {
+    cursor: pointer;
+  }
+  main .header .top-bar .navigation .links {
+    grid-area: links;
+    width: 50%;
+    margin-left: 36rem;
   }
   main .header .top-bar .navigation .links a {
     color: hsl(0, 0%, 100%);
@@ -211,14 +227,23 @@ body main .footer .copyrights {
             text-decoration: underline 0.25rem;
     text-underline-offset: 0.5rem;
     cursor: pointer;
-    transition: 5ms;
+    transition: 0.3s;
   }
-  main .header h1 {
-    bottom: 705px !important;
-    left: 230px !important;
+  main .header .card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
     width: 41% !important;
     font-size: 4.5rem !important;
     padding-top: 2.5rem !important;
+  }
+  main .header .image-thumb-desktop, main .header .card-content {
+    grid-area: 1/2;
+  }
+  main .header h1 {
+    font-size: 3.5rem !important;
+    width: 35% !important;
+    margin-left: 8.5rem !important;
   }
   main .interactive {
     display: grid;
@@ -337,8 +362,9 @@ body main .footer .copyrights {
   }
   main .footer .copyrights {
     grid-area: copyright;
-    margin-left: 12rem;
     font-size: 1rem !important;
+    width: 45%;
+    margin-left: 24rem;
   }
 }
 .open {
