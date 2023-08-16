@@ -52,9 +52,14 @@ body main .header .top-bar {
   position: relative;
 }
 body main .header .top-bar .navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   position: absolute;
   bottom: 600px;
   padding: 0 1.5rem;
+}
+body main .header .top-bar .navigation .logo {
+  width: 20%;
 }
 body main .header .top-bar .navigation #open-button {
   padding-top: 5px;
@@ -197,14 +202,14 @@ body main .footer .copyrights {
   }
   main .header .top-bar .navigation {
     display: grid;
-    grid-template-areas: "logo links";
-    grid-template-columns: auto 1fr;
+    grid-template-areas: "logo links" !important;
+    grid-template-columns: auto 1fr !important;
     align-items: center;
     padding: 4rem 10rem 0 !important;
   }
   main .header .top-bar .navigation .logo {
     grid-area: logo;
-    width: 80%;
+    width: 80% !important;
     height: auto;
   }
   main .header .top-bar .navigation .logo:hover {
